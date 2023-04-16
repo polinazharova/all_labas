@@ -1,12 +1,12 @@
-// Дан двумерный целочисленный массив с рандомными числами. Написать программу, говорящую
-// пользователю, строку и столбец, где расположен искомый им элемент.
-// Требование: поиск должен быть написан через функцию.
-// Примечание. Здесь Вы можете дать пользователю список всех доступных элементов, он выберет и 
-// начнется поиск по двумерному массиву.
+/* Дан двумерный целочисленный массив с рандомными числами. Написать программу, говорящую
+пользователю, строку и столбец, где расположен искомый им элемент.
+Требование: поиск должен быть написан через функцию.
+Примечание. Здесь Вы можете дать пользователю список всех доступных элементов, он выберет и 
+начнется поиск по двумерному массиву. */
 
-#include <stdio.h>  
-#include <locale.h> 
-#include <stdbool.h>
+// #include <stdio.h>  
+// #include <locale.h> 
+// #include <stdbool.h>
 
 int digitsarr[][3] = 
     {
@@ -15,14 +15,11 @@ int digitsarr[][3] =
     9,8,11
     };
 
-
-
 void here_are_digits() {
-int first = 0;
-int second = 0;
-
-printf("Here are your elements. Choose one of 'em: \n");
-while(true){
+    int first = 0;
+    int second = 0;
+    printf("Here are your elements. Choose one of 'em: \n");
+    while(true){
     printf("%d ", digitsarr[first][second]);
     if(first == 2 && second == 2)
         break;
@@ -51,10 +48,4 @@ void wheres_your_digit(){
     else
         second++;
     }
-}
-
-void main(){
-    
-    here_are_digits();
-    wheres_your_digit();
 }
