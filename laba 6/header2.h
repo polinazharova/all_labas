@@ -4,10 +4,11 @@
 Примечание. Здесь Вы можете дать пользователю список всех доступных элементов, он выберет и 
 начнется поиск по двумерному массиву. */
 
-// #include <stdio.h>  
-// #include <locale.h> 
-// #include <stdbool.h>
+#include <stdio.h>  
+#include <locale.h> 
+#include <stdbool.h>
 
+// Исходный массив
 int digitsarr[][3] = 
     {
     2,3,6,
@@ -15,6 +16,7 @@ int digitsarr[][3] =
     9,8,11
     };
 
+// Выводим массив в виде матрицы пользователю
 void here_are_digits() {
     int first = 0;
     int second = 0;
@@ -32,6 +34,8 @@ void here_are_digits() {
 }
 }
 
+/* Позволяем выбрать пользователю один из существующих в массиве элементов и называем строку и столбец 
+этого элемента */
 void wheres_your_digit(){
     int first = 0;
     int second = 0;

@@ -23,28 +23,32 @@
 #include <stdio.h>  
 #include <stdbool.h>
 #include <stdlib.h>
+#include <locale.h> 
 
 //DYNAMIC METHOD
 
 int *mass;
 int n;
 
+// Спрашиваем из скольких элементов состоит массив и рандомим в него числа
 void workingwitharray(){
     printf("How many numbers is gonna be there in your array? ");
     scanf("%d", &n);
-    mass = malloc( sizeof(int) * n );
+    mass = (int*)malloc( sizeof(int) * n );
     for(int i = 0; i < n; i++){
         mass[i] = rand() % 100;
         }
 }
 
+// Расширяем память, занимаемую массивом на вес одного int 
 void append(int a){
-    mass = realloc(mass, sizeof(int) * (n+1));
+    mass = (int*)realloc(mass, sizeof(int) * (n+1));
     mass[n] = a;
     n++;
     print();
 }
 
+// С помощью цикла выводим массив
 void print(){
    int p = 0;
    printf("\nYour array is ");
@@ -56,6 +60,7 @@ void print(){
      }
  }
 
+// Замена рандомного элемента на рандомное значение
 void insert(int a, int b){
     mass[a] = b;
     print();
